@@ -16,8 +16,8 @@
   "editable": false,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 25,
-  "iteration": 1556462543461,
+  "id": 30,
+  "iteration": 1558251818354,
   "links": [],
   "panels": [
     {
@@ -1745,7 +1745,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Synology",
-  "uid": "000000025",
-  "version": 44
+  "title": "Synology Status",
+  "uid": "UxxqNOZZz",
+  "version": 2
 }
