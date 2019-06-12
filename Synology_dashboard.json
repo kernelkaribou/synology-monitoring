@@ -1641,7 +1641,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Holocron",
+        "datasource": "Default",
         "definition": "SHOW TAG VALUES FROM \"synology_raid\" WITH KEY = \"raid_name\" WHERE \"nas_name\" =~ /^$nas_host/",
         "hide": 0,
         "includeAll": true,
