@@ -390,10 +390,7 @@
       "linewidth": 1,
       "links": [],
       "maxPerRow": 4,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
+      "nullPointMode": "connected",
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -841,10 +838,7 @@
       "lines": true,
       "linewidth": 1,
       "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
+      "nullPointMode": "connected",
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -1218,9 +1212,6 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "connected",
-      "options": {
-        "dataLinks": []
-      },
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -1763,8 +1754,5 @@
   "timezone": "browser",
   "title": "Synology Status",
   "uid": "UxxqNOZZz",
-  "variables": {
-    "list": []
-  },
-  "version": 4
+  "version": 2
 }
