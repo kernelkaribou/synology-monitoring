@@ -44,14 +44,12 @@
       "styles": [
         {
           "alias": "Time",
-          "align": "auto",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "pattern": "Time",
           "type": "hidden"
         },
         {
           "alias": "",
-          "align": "auto",
           "colorMode": "value",
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -82,7 +80,6 @@
         },
         {
           "alias": "",
-          "align": "auto",
           "colorMode": "value",
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -111,7 +108,6 @@
         },
         {
           "alias": "",
-          "align": "auto",
           "colorMode": "value",
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -130,7 +126,6 @@
         },
         {
           "alias": "",
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -168,7 +163,6 @@
         },
         {
           "alias": "",
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -371,7 +365,6 @@
       "datasource": "Synology",
       "decimals": 0,
       "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 6,
         "w": 12,
@@ -379,15 +372,12 @@
         "y": 3
       },
       "height": "300",
-      "hiddenSeries": false,
       "id": 2,
       "interval": "$default_interval",
       "legend": {
         "alignAsTable": true,
         "avg": true,
         "current": true,
-        "hideEmpty": false,
-        "hideZero": false,
         "max": true,
         "min": false,
         "rightSide": true,
@@ -631,15 +621,12 @@
         "y": 3
       },
       "height": "325",
-      "hiddenSeries": false,
       "id": 5,
       "interval": "$default_interval",
       "legend": {
         "alignAsTable": true,
         "avg": true,
         "current": true,
-        "hideEmpty": false,
-        "hideZero": false,
         "max": true,
         "min": false,
         "rightSide": true,
@@ -840,7 +827,6 @@
         "y": 9
       },
       "height": "250",
-      "hiddenSeries": false,
       "id": 19,
       "interval": "$default_interval",
       "legend": {
@@ -1038,13 +1024,11 @@
       },
       "styles": [
         {
-          "align": "auto",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "pattern": "Time",
           "type": "hidden"
         },
         {
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1058,7 +1042,6 @@
           "unit": "short"
         },
         {
-          "align": "auto",
           "colorMode": "cell",
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -1084,7 +1067,6 @@
         },
         {
           "alias": "Temp",
-          "align": "auto",
           "colorMode": "cell",
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -1103,7 +1085,6 @@
         },
         {
           "alias": "Disk",
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1390,7 +1371,6 @@
       "styles": [
         {
           "alias": "Volume",
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1406,7 +1386,6 @@
         },
         {
           "alias": "",
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1422,7 +1401,6 @@
         },
         {
           "alias": "",
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1438,7 +1416,6 @@
         },
         {
           "alias": "",
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1455,7 +1432,6 @@
         },
         {
           "alias": "Free",
-          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -1550,7 +1526,7 @@
     }
   ],
   "refresh": "5m",
-  "schemaVersion": 22,
+  "schemaVersion": 18,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1560,7 +1536,6 @@
         "auto_count": 30,
         "auto_min": "10s",
         "current": {
-          "selected": false,
           "text": "5m",
           "value": "5m"
         },
@@ -1607,14 +1582,13 @@
       {
         "allValue": null,
         "current": {
-          "text": "DSRobi",
-          "value": "DSRobi"
+          "text": "GalaxyServices",
+          "value": "GalaxyServices"
         },
         "datasource": "Synology",
         "definition": "SHOW TAG VALUES FROM \"synology_system\" WITH KEY = \"nas_name\"",
         "hide": 0,
         "includeAll": false,
-        "index": -1,
         "label": "NAS",
         "multi": false,
         "name": "nas_host",
@@ -1641,7 +1615,6 @@
         "definition": "SHOW TAG VALUES FROM \"synology_network\" WITH KEY = \"interface_name\"  WHERE \"nas_name\" =~ /^$nas_host/",
         "hide": 0,
         "includeAll": true,
-        "index": -1,
         "label": "Interface",
         "multi": true,
         "name": "nas_interface",
@@ -1669,7 +1642,6 @@
         "definition": "SHOW TAG VALUES FROM \"synology_disk\" WITH KEY = \"disk_path\" WHERE \"nas_name\" =~ /^$nas_host/",
         "hide": 0,
         "includeAll": true,
-        "index": -1,
         "label": "Disk",
         "multi": true,
         "name": "nas_disk",
@@ -1696,7 +1668,6 @@
         "definition": "SHOW TAG VALUES FROM \"synology_raid\" WITH KEY = \"raid_name\" WHERE \"nas_name\" =~ /^$nas_host/",
         "hide": 0,
         "includeAll": true,
-        "index": -1,
         "label": "Volume",
         "multi": true,
         "name": "nas_volume",
