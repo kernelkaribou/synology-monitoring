@@ -613,7 +613,6 @@
       "datasource": "Synology",
       "decimals": 1,
       "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 6,
         "w": 12,
@@ -640,9 +639,6 @@
       "links": [],
       "maxPerRow": 4,
       "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -819,7 +815,6 @@
       "datasource": "Synology",
       "decimals": 0,
       "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 6,
         "w": 17,
@@ -1197,7 +1192,6 @@
       "datasource": "Synology",
       "decimals": 1,
       "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 6,
         "w": 17,
@@ -1205,7 +1199,6 @@
         "y": 15
       },
       "height": "250",
-      "hiddenSeries": false,
       "hideTimeOverride": false,
       "id": 20,
       "interval": "$default_interval",
@@ -1607,9 +1600,10 @@
       {
         "allValue": "",
         "current": {
-          "selected": false,
-          "text": "All",
-          "value": "$__all"
+          "text": "bond0",
+          "value": [
+            "bond0"
+          ]
         },
         "datasource": "Synology",
         "definition": "SHOW TAG VALUES FROM \"synology_network\" WITH KEY = \"interface_name\"  WHERE \"nas_name\" =~ /^$nas_host/",
@@ -1660,7 +1654,6 @@
       {
         "allValue": "",
         "current": {
-          "selected": false,
           "text": "All",
           "value": "$__all"
         },
