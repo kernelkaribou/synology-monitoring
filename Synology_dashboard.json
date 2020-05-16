@@ -13,11 +13,11 @@
     ]
   },
   "description": "Panel for Synology metrics",
-  "editable": true,
+  "editable": false,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 4,
-  "iteration": 1589621489446,
+  "id": 30,
+  "iteration": 1558251818354,
   "links": [],
   "panels": [
     {
@@ -56,7 +56,7 @@
           "colors": [
             "rgba(50, 172, 45, 0.97)",
             "#E02F44",
-"rgba(245, 54, 54, 0.9)"
+            "rgba(245, 54, 54, 0.9)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
@@ -65,7 +65,7 @@
           "mappingType": 1,
           "pattern": "System Status",
           "thresholds": [
-"2"
+            "2"
           ],
           "type": "string",
           "unit": "short",
@@ -87,14 +87,14 @@
           "colors": [
             "rgba(50, 172, 45, 0.97)",
             "#E02F44",
-"rgba(245, 54, 54, 0.9)"
+            "rgba(245, 54, 54, 0.9)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
           "mappingType": 1,
           "pattern": "Fan Status",
           "thresholds": [
-"2"
+            "2"
           ],
           "type": "string",
           "unit": "short",
@@ -116,14 +116,14 @@
           "colors": [
             "rgba(50, 172, 45, 0.97)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(245, 54, 54, 0.9)"
+            "rgba(245, 54, 54, 0.9)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": null,
           "pattern": "Temperature",
           "thresholds": [
             "50",
-"70"
+            "70"
           ],
           "type": "number",
           "unit": "celsius"
@@ -135,7 +135,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "decimals": 2,
           "mappingType": 1,
@@ -173,7 +173,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 1,
@@ -199,7 +199,7 @@
             [
               {
                 "params": [
-"system_temp"
+                  "system_temp"
                 ],
                 "type": "field"
               },
@@ -209,7 +209,7 @@
               },
               {
                 "params": [
-"Temperature"
+                  "Temperature"
                 ],
                 "type": "alias"
               }
@@ -217,7 +217,7 @@
             [
               {
                 "params": [
-"system_status"
+                  "system_status"
                 ],
                 "type": "field"
               },
@@ -227,7 +227,7 @@
               },
               {
                 "params": [
-"System Status"
+                  "System Status"
                 ],
                 "type": "alias"
               }
@@ -235,7 +235,7 @@
             [
               {
                 "params": [
-"fan_status"
+                  "fan_status"
                 ],
                 "type": "field"
               },
@@ -245,7 +245,7 @@
               },
               {
                 "params": [
-"Fan Status"
+                  "Fan Status"
                 ],
                 "type": "alias"
               }
@@ -253,7 +253,7 @@
             [
               {
                 "params": [
-"upgrade_status"
+                  "upgrade_status"
                 ],
                 "type": "field"
               },
@@ -263,7 +263,7 @@
               },
               {
                 "params": [
-"Upgrade Status"
+                  "Upgrade Status"
                 ],
                 "type": "alias"
               }
@@ -271,7 +271,7 @@
             [
               {
                 "params": [
-"dsm_version"
+                  "dsm_version"
                 ],
                 "type": "field"
               },
@@ -281,7 +281,7 @@
               },
               {
                 "params": [
-"DSM Version"
+                  "DSM Version"
                 ],
                 "type": "alias"
               }
@@ -289,7 +289,7 @@
             [
               {
                 "params": [
-"uptime"
+                  "uptime"
                 ],
                 "type": "field"
               },
@@ -299,13 +299,13 @@
               },
               {
                 "params": [
-"/ 100"
+                  "/ 100"
                 ],
                 "type": "math"
               },
               {
                 "params": [
-"Uptime"
+                  "Uptime"
                 ],
                 "type": "alias"
               }
@@ -313,7 +313,7 @@
             [
               {
                 "params": [
-"model"
+                  "model"
                 ],
                 "type": "field"
               },
@@ -323,7 +323,7 @@
               },
               {
                 "params": [
-"Model"
+                  "Model"
                 ],
                 "type": "alias"
               }
@@ -331,7 +331,7 @@
             [
               {
                 "params": [
-"serial_number"
+                  "serial_number"
                 ],
                 "type": "field"
               },
@@ -341,7 +341,7 @@
               },
               {
                 "params": [
-"Serial Number"
+                  "Serial Number"
                 ],
                 "type": "alias"
               }
@@ -439,13 +439,13 @@
           "groupBy": [
             {
               "params": [
-"$__interval"
+                "$__interval"
               ],
               "type": "time"
             },
             {
               "params": [
-"null"
+                "null"
               ],
               "type": "fill"
             }
@@ -462,7 +462,7 @@
             [
               {
                 "params": [
-"cpu_free"
+                  "cpu_free"
                 ],
                 "type": "field"
               },
@@ -492,13 +492,13 @@
           "groupBy": [
             {
               "params": [
-"$__interval"
+                "$__interval"
               ],
               "type": "time"
             },
             {
               "params": [
-"null"
+                "null"
               ],
               "type": "fill"
             }
@@ -514,7 +514,7 @@
             [
               {
                 "params": [
-"value"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -532,13 +532,13 @@
           "groupBy": [
             {
               "params": [
-"$__interval"
+                "$__interval"
               ],
               "type": "time"
             },
             {
               "params": [
-"null"
+                "null"
               ],
               "type": "fill"
             }
@@ -553,7 +553,7 @@
             [
               {
                 "params": [
-"value"
+                  "value"
                 ],
                 "type": "field"
               },
@@ -683,19 +683,19 @@
           "groupBy": [
             {
               "params": [
-"$__interval"
+                "$__interval"
               ],
               "type": "time"
             },
             {
               "params": [
-"interface_name"
+                "interface_name"
               ],
               "type": "tag"
             },
             {
               "params": [
-"none"
+                "none"
               ],
               "type": "fill"
             }
@@ -709,7 +709,7 @@
             [
               {
                 "params": [
-"bytes_recv"
+                  "bytes_recv"
                 ],
                 "type": "field"
               },
@@ -719,19 +719,19 @@
               },
               {
                 "params": [
-"1s"
+                  "1s"
                 ],
                 "type": "non_negative_derivative"
               },
               {
                 "params": [
-"*8"
+                  "*8"
                 ],
                 "type": "math"
               },
               {
                 "params": [
-"Rx"
+                  "Rx"
                 ],
                 "type": "alias"
               }
@@ -739,7 +739,7 @@
             [
               {
                 "params": [
-"bytes_sent"
+                  "bytes_sent"
                 ],
                 "type": "field"
               },
@@ -749,19 +749,19 @@
               },
               {
                 "params": [
-"1s"
+                  "1s"
                 ],
                 "type": "non_negative_derivative"
               },
               {
                 "params": [
-"*8"
+                  "*8"
                 ],
                 "type": "math"
               },
               {
                 "params": [
-"Tx"
+                  "Tx"
                 ],
                 "type": "alias"
               }
@@ -884,19 +884,19 @@
           "groupBy": [
             {
               "params": [
-"$__interval"
+                "$__interval"
               ],
               "type": "time"
             },
             {
               "params": [
-"disk_path"
+                "disk_path"
               ],
               "type": "tag"
             },
             {
               "params": [
-"previous"
+                "previous"
               ],
               "type": "fill"
             }
@@ -910,7 +910,7 @@
             [
               {
                 "params": [
-"disk_reads"
+                  "disk_reads"
                 ],
                 "type": "field"
               },
@@ -920,13 +920,13 @@
               },
               {
                 "params": [
-"1s"
+                  "1s"
                 ],
                 "type": "non_negative_derivative"
               },
               {
                 "params": [
-"Read"
+                  "Read"
                 ],
                 "type": "alias"
               }
@@ -934,7 +934,7 @@
             [
               {
                 "params": [
-"disk_writes"
+                  "disk_writes"
                 ],
                 "type": "field"
               },
@@ -944,13 +944,13 @@
               },
               {
                 "params": [
-"1s"
+                  "1s"
                 ],
                 "type": "non_negative_derivative"
               },
               {
                 "params": [
-"Write"
+                  "Write"
                 ],
                 "type": "alias"
               }
@@ -1049,7 +1049,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "decimals": 2,
           "pattern": "Model",
@@ -1063,7 +1063,7 @@
           "colors": [
             "rgba(50, 172, 45, 0.97)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(245, 54, 54, 0.9)"
+            "rgba(245, 54, 54, 0.9)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 0,
@@ -1071,7 +1071,7 @@
           "pattern": "Status",
           "thresholds": [
             "4",
-"5"
+            "5"
           ],
           "type": "string",
           "unit": "short",
@@ -1089,14 +1089,14 @@
           "colors": [
             "rgba(50, 172, 45, 0.97)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(245, 54, 54, 0.9)"
+            "rgba(245, 54, 54, 0.9)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 0,
           "pattern": "Temp",
           "thresholds": [
             "42",
-"50"
+            "50"
           ],
           "type": "number",
           "unit": "celsius"
@@ -1108,7 +1108,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
@@ -1123,7 +1123,7 @@
           "groupBy": [
             {
               "params": [
-"disk_name"
+                "disk_name"
               ],
               "type": "tag"
             }
@@ -1138,7 +1138,7 @@
             [
               {
                 "params": [
-"disk_status"
+                  "disk_status"
                 ],
                 "type": "field"
               },
@@ -1148,7 +1148,7 @@
               },
               {
                 "params": [
-"Status"
+                  "Status"
                 ],
                 "type": "alias"
               }
@@ -1156,7 +1156,7 @@
             [
               {
                 "params": [
-"disk_model"
+                  "disk_model"
                 ],
                 "type": "field"
               },
@@ -1166,7 +1166,7 @@
               },
               {
                 "params": [
-"Model"
+                  "Model"
                 ],
                 "type": "alias"
               }
@@ -1174,7 +1174,7 @@
             [
               {
                 "params": [
-"disk_type"
+                  "disk_type"
                 ],
                 "type": "field"
               },
@@ -1184,7 +1184,7 @@
               },
               {
                 "params": [
-"Type"
+                  "Type"
                 ],
                 "type": "alias"
               }
@@ -1263,13 +1263,13 @@
           "groupBy": [
             {
               "params": [
-"$__interval"
+                "$__interval"
               ],
               "type": "time"
             },
             {
               "params": [
-"drive"
+                "drive"
               ],
               "type": "tag"
             }
@@ -1285,7 +1285,7 @@
             [
               {
                 "params": [
-"drive_temp"
+                  "drive_temp"
                 ],
                 "type": "field"
               },
@@ -1295,7 +1295,7 @@
               },
               {
                 "params": [
-"Temp"
+                  "Temp"
                 ],
                 "type": "alias"
               }
@@ -1395,7 +1395,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
@@ -1411,7 +1411,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 1,
@@ -1427,7 +1427,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
@@ -1443,7 +1443,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
@@ -1460,7 +1460,7 @@
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
-"rgba(50, 172, 45, 0.97)"
+            "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 1,
@@ -1477,7 +1477,7 @@
           "groupBy": [
             {
               "params": [
-"volume"
+                "volume"
               ],
               "type": "tag"
             }
@@ -1494,13 +1494,13 @@
             [
               {
                 "params": [
-"vol_totalsize"
+                  "vol_totalsize"
                 ],
                 "type": "field"
               },
               {
                 "params": [
-"Volume Size"
+                  "Volume Size"
                 ],
                 "type": "alias"
               }
@@ -1508,13 +1508,13 @@
             [
               {
                 "params": [
-"vol_used"
+                  "vol_used"
                 ],
                 "type": "field"
               },
               {
                 "params": [
-"Used"
+                  "Used"
                 ],
                 "type": "alias"
               }
@@ -1522,7 +1522,7 @@
             [
               {
                 "params": [
-"vol_used"
+                  "vol_used"
                 ],
                 "type": "field"
               }
@@ -1662,7 +1662,7 @@
         "current": {
           "text": "All",
           "value": [
-"$__all"
+            "$__all"
           ]
         },
         "datasource": "Synology",
@@ -1782,7 +1782,7 @@
       "30m",
       "1h",
       "2h",
-"1d"
+      "1d"
     ],
     "time_options": [
       "5m",
@@ -1793,7 +1793,7 @@
       "24h",
       "2d",
       "7d",
-"30d"
+      "30d"
     ]
   },
   "timezone": "browser",
