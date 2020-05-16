@@ -22,6 +22,7 @@
   "panels": [
     {
       "columns": [],
+      "datasource": "Synology",
       "fontSize": "120%",
       "gridPos": {
         "h": 3,
@@ -361,6 +362,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Synology",
       "decimals": 0,
       "fill": 1,
       "gridPos": {
@@ -605,6 +607,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Synology",
       "decimals": 1,
       "fill": 1,
       "gridPos": {
@@ -806,6 +809,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Synology",
       "decimals": 0,
       "fill": 1,
       "gridPos": {
@@ -988,6 +992,7 @@
     },
     {
       "columns": [],
+      "datasource": "Synology",
       "fontSize": "100%",
       "gridPos": {
         "h": 6,
@@ -1178,6 +1183,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": "Synology",
       "decimals": 1,
       "fill": 1,
       "gridPos": {
@@ -1327,6 +1333,7 @@
     },
     {
       "columns": [],
+      "datasource": "Synology",
       "fontSize": "100%",
       "gridPos": {
         "h": 6,
@@ -1562,7 +1569,7 @@
           "text": "GalaxyServices",
           "value": "GalaxyServices"
         },
-        "datasource": "Default",
+        "datasource": "Synology",
         "definition": "SHOW TAG VALUES FROM \"synology_system\" WITH KEY = \"nas_name\"",
         "hide": 0,
         "includeAll": false,
@@ -1589,7 +1596,7 @@
             "bond0"
           ]
         },
-        "datasource": "Default",
+        "datasource": "Synology",
         "definition": "SHOW TAG VALUES FROM \"synology_network\" WITH KEY = \"interface_name\"  WHERE \"nas_name\" =~ /^$nas_host/",
         "hide": 0,
         "includeAll": true,
@@ -1616,7 +1623,7 @@
             "$__all"
           ]
         },
-        "datasource": "Default",
+        "datasource": "Synology",
         "definition": "SHOW TAG VALUES FROM \"synology_disk\" WITH KEY = \"disk_path\" WHERE \"nas_name\" =~ /^$nas_host/",
         "hide": 0,
         "includeAll": true,
@@ -1641,7 +1648,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Holocron",
+        "datasource": "Synology",
         "definition": "SHOW TAG VALUES FROM \"synology_raid\" WITH KEY = \"raid_name\" WHERE \"nas_name\" =~ /^$nas_host/",
         "hide": 0,
         "includeAll": true,
