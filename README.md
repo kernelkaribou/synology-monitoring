@@ -16,7 +16,7 @@ The script is best suited to run on the NAS itself and highly recommended. It ca
 1. Save the script to a known location on the NAS. For example, /volume1/Local/Scripts/synology_snmp.sh 
 2. Input the InfluxDB information such as URL/IP, ports, database name, username and password. 
 3. Modify any other configuration settings, each should have an explanation.
-4. On the Synology NAS, Select Control Panel > Terminal & SNMP > SNMP and enable SNMP V1, V2c service.
+4. On the Synology NAS, Select Control Panel > Terminal & SNMP > SNMP and enable SNMP V1, V2c service. <br> Ensure that you set the community to 'public' in the Synology settings as the `snmpwalk` command is utilizing the `-c public` flag 
 5. On the Synology NAS, Select Control Panel > Task Scheduler > Create >> Scheduled Task >> User-defined Script.
 6. Give the Task a recognizable name.
 7. On the Task Settings, set the Run command to *bash /path/to/synology_snmp.sh*
