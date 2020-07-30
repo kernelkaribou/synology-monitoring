@@ -376,7 +376,7 @@ while [ $i -lt $total_executions ]; do
 	if [[ -z $influxdb_user ]]; then
 		curl -i -XPOST "http://$influxdb_host:$influxdb_port/write?db=$influxdb_name" --data-binary "$post_url"
 	else
-		curl -i -XPOST "http://$influxdb_host:$influxdb_port/write?u=$influxdb_user&p=$influxdb_pass&db=$influxdb_name" --data-binary "$post_url"
+		curl -i -XPOST "http://$influxdb_host:$influxdb_port/write?db=$influxdb_name&u=$influxdb_user&p=$influxdb_pass" --data-binary "$post_url"
 	fi
 	echo "$post_url"
 	
