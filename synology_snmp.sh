@@ -10,7 +10,7 @@ capture_cpu="true"	#CPU usage
 capture_volume="true" #Volume statistics, this is similar to raid but is not a Synology MIB
 capture_raid="true" #Synology volume/raid statistics.  Preferred stats as they are syno specific.
 capture_disk="true" #disk specific stats such as model, type, reads, writes, load and temperature
-capture_ups="true" #get UPS status such as runtime, status and charge level.
+capture_ups="false" #get UPS status such as runtime, status and charge level. Default false as it will fail if no UPS is configured.
 capture_network="true" #Get network stats, Rx and Tx
 
 #Set capture intervals in seconds. Tor instance 10 which will be 6 times in a minute.  Do not recommend more frequent than 10 seconds with between 15-20 being ideal. Set it higher than 60 and you are an idiot
