@@ -279,15 +279,15 @@ while [ $i -lt $total_executions ]; do
 			disk_path="/dev/"${disk_info[$id]}
 			
 			while IFS= read -r line; do
-				if [[ $line == SYNOLOGY-STORAGEIO-MIB::storageIONReadX.$id* ]]; then
+				if [[ $line == "SYNOLOGY-STORAGEIO-MIB::storageIONReadX.$id "* ]]; then
 					disk_reads=${line/"SYNOLOGY-STORAGEIO-MIB::storageIONReadX."$id" = Counter64: "/};
 				fi
 		
-				if [[ $line == SYNOLOGY-STORAGEIO-MIB::storageIONWrittenX.$id* ]]; then
+				if [[ $line == "SYNOLOGY-STORAGEIO-MIB::storageIONWrittenX.$id "* ]]; then
 					disk_writes=${line/"SYNOLOGY-STORAGEIO-MIB::storageIONWrittenX."$id" = Counter64: "/}
 				fi
 		
-				if [[ $line == SYNOLOGY-STORAGEIO-MIB::storageIOLA.$id* ]]; then
+				if [[ $line == "SYNOLOGY-STORAGEIO-MIB::storageIOLA.$id "* ]]; then
 					disk_load=${line/"SYNOLOGY-STORAGEIO-MIB::storageIOLA."$id" = INTEGER: "/}
 				fi
 			done< <(snmpwalk -v 2c -c public localhost 1.3.6.1.4.1.6574.101)
