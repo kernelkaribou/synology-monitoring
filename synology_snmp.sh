@@ -24,9 +24,14 @@ ups_group="NAS" #For filtering metrics if more than one UPS, only necessary if c
 #INFLUXDB SETTINGS
 influxdb_host="127.0.0.1" #URL/IP for influxdb
 influxdb_port="8086" #Port influxdb is running on
+#INFLUXDB v1 SETTINGS
 influxdb_name="telegraf" #influxdb database name, default telegraf
 influxdb_user="" #influxdb user, leave blank if you do not have an influxdb user, shame on you.
 influxdb_pass="" #influxdb password
+#INFLUXDB v2 SETTINGS
+influxdb_bucket="telegraf"  #influxdb v2 bucket name, default telegraf
+influxdb_token="your_token"
+influxdb_org="your_org"
 
 #HTTP METHOD SETTINGS
 http_method="http" #Setting for https or http URL, default for influx is http and thus 'http'. Set to 'https' if using a secure port such as through a Reverse Proxy
@@ -376,10 +381,22 @@ while [ $i -lt $total_executions ]; do
 	fi
 	
 	#Post to influxdb
-	if [[ -z $influxdb_user ]]; then
-		curl -i -XPOST "$http_method://$influxdb_host:$influxdb_port/write?db=$influxdb_name" --data-binary "$post_url"
+	if [[ -z $influxdb_port ]]; then
+		influxdb_host=$influxdb_host
 	else
-		curl -i -XPOST "$http_method://$influxdb_host:$influxdb_port/write?db=$influxdb_name&u=$influxdb_user&p=$influxdb_pass" --data-binary "$post_url"
+		influxdb_host="$influxdb_host:$influxdb_port"
+	fi
+	
+	if [[ $influxdb_version == 1 ]]; then
+		echo "V1"
+		if [[ -z $influxdb_user ]]; then
+			curl -i -XPOST "$http_method://$influxdb_host:$influxdb_port/write?db=$influxdb_name" --data-binary "$post_url"
+		else
+			curl -i -XPOST "$http_method://$influxdb_host:$influxdb_port/write?db=$influxdb_name&u=$influxdb_user&p=$influxdb_pass" --data-binary "$post_url"
+		fi
+	else
+		echo "V2"
+		curl -i -XPOST "$http_method://$influxdb_host/api/v2/write?org=$influxdb_org&bucket=$influxdb_bucket" --header "Authorization: Token $influxdb_token" --data-binary "$post_url"
 	fi
 	echo "$post_url"
 	
