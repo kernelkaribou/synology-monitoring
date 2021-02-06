@@ -64,6 +64,9 @@ while [ $i -lt $total_executions ]; do
 		#Fan status1 is online, 0 is failed/offline
 		system_fan_status=`snmpwalk -c public -v 2c $nas_url SYNOLOGY-SYSTEM-MIB::systemFanStatus.0 -Oqv`
 		
+		#Fan status1 is online, 0 is failed/offline
+		system_fan_cpu_status=`snmpwalk -c public -v 2c $nas_url SYNOLOGY-SYSTEM-MIB::cpuFanStatus.0 -Oqv`
+				
 		#Various SYNOLOGY-SYSTEM stats for common OID
 		while IFS= read -r line; do
 		
@@ -87,7 +90,7 @@ while [ $i -lt $total_executions ]; do
 		system_temp=`snmpwalk -v 2c -c public $nas_url 1.3.6.1.4.1.6574.1.2 -Oqv`
 		
 		#System details to post
-		post_url=$post_url"$measurement,nas_name=$nas_name uptime=$system_uptime,system_status=$system_status,fan_status=$system_fan_status,model=$model,serial_number=$serial,upgrade_status=$upgrade,dsm_version=$version,system_temp=$system_temp
+		post_url=$post_url"$measurement,nas_name=$nas_name uptime=$system_uptime,system_status=$system_status,fan_status=$system_fan_status,fan_cpu_status=$system_fan_cpu_status,model=$model,serial_number=$serial,upgrade_status=$upgrade,dsm_version=$version,system_temp=$system_temp
 "
 	else
 		echo "Skipping system capture"
