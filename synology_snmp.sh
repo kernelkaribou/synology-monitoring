@@ -326,6 +326,15 @@ while [ $i -lt $total_executions ]; do
 		elif [[ $ups_status == "OL DISCHRG" ]];
 		    then
 		        ups_status=3
+		elif [[ $ups_status == "FSD OL" ]];
+		    then
+		        ups_status=4
+		elif [[ $ups_status == "FSD OB LB" ]];
+		    then
+		        ups_status=5
+		elif [[ $ups_status == "OB" ]];
+		    then
+		        ups_status=6
 		fi
 		
 		#Battery Runtime
